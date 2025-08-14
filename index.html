@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #25D366, #075E54);
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #1ebe5d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact on WhatsApp</h1>
+        <a id="contactBtn" class="btn" href="#" target="_blank">💬 Message Now</a>
+    </div>
+
+    <script>
+        const contacts = ['919038489068', '918400493328', '919286034717', '917826026950', '919850572431', 
+                          '917096111602', '919203144184', '919055757210', '919347552430', '919914943465', 
+                          '917358499357', '918108032956', '918086044876', '916005587306', '916307682928', 
+                          '918750380637', '917206532482', '918110945282', '919588125947', '916379406685', 
+                          '919866479216', '918807642132', '919546866503', '918590136155', '918492973843', 
+                          '918875808152', '919741333494', '918904410331', '919329174076', '919315341275', 
+                          '919532211157', '918856078026', '919329493664', '919813369771', '918434107079', 
+                          '919243513407', '918260215439', '918625007228', '919985585214', '919387799542', 
+                          '919104269463', '917893272200', '916264952744', '919735313709', '919667025254', 
+                          '919934092311'];
+        const randomContact = contacts[Math.floor(Math.random() * contacts.length)];
+        document.getElementById("contactBtn").href = "https://wa.me/" + randomContact;
+    </script>
+</body>
+</html>
